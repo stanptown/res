@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    
+
+    <title>{% block title %}{% endblock %}</title>
+      {% load static %}
+
+    
+
+
+      {% block css %}
+      {% endblock %}
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+      <a class="navbar-brand mr-1" href="{% url 'index' %}"><b><i><marquee>KENDRIYA VIDYALAYA NO 2 RESULT EMULATOR</marquee></i></b></a>
+
+      
+
+
+    </nav>
+
+    <div id="wrapper">
+
+
+      <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <div class="text-center h3">
+                YOU HAVE BEEN LOGGED OUT
+                <br><br>
+                <a class="btn btn-success" href="/accounts/login">WANNA LOGIN?</a>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+   {% block scripts %}
+    {% endblock %}
+  </body>
+
+</html>

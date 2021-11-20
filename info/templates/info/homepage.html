@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+      <a class="navbar-brand" href="{% url 'index' %}"><b><i><marquee>KENDIRYA VIDYALAYA NO.2 RESULT SIMULATOR</marquee></i></b></a>
+        
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Features -->
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+              <a href="{% url 'attendance' request.user.student.USN %}">
+              </a>
+              <div class="card-body">
+              <h4 class="card-title">Attendance</h4>
+              <p class="card-text">View the attendance status for each of your courses. The attendance of each course is
+                  also displayed as list of classes that were conducted.</p>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" role="button" href="{% url 'attendance' request.user.student.USN %}"> View Attendance</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+              <a href="{% url 'marks_list' request.user.student.USN %}">
+              </a>
+              <div class="card-body">
+              <h4 class="card-title">Marks</h4>
+              <p class="card-text">View the marks obtained for each of your courses. These include the marks of 3
+                  internal assessment, 2 events and the Semester End Exam  </p>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" role="button" href="{% url 'marks_list' request.user.student.USN %}">View Marks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" 
+    aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <a class="btn btn-primary" href="/accounts/logout">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
